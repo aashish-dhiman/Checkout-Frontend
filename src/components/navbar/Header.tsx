@@ -26,7 +26,7 @@ const Header = (props: Props) => {
                 backgroundColor: theme["--background"],
                 color: theme["--primary-foreground"],
             }}
-            className="w-full flex items-center justify-between px-7 py-4 lg:px-[100px]"
+            className="w-full flex items-center justify-between px-3 sm:px-7 py-4 lg:px-[100px]"
         >
             <div className="flex items-center gap-2 ">
                 <Image
