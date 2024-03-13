@@ -35,6 +35,7 @@ const TotalCard = ({ data }: Props) => {
         if (coupon.toLowerCase() === "groww") {
             setDiscount(0.1);
             setCoupon("");
+            dispatch(setFinalPrice((totalAmount * (1 - discount)).toFixed(2)));
             setShowWarning(false);
         } else {
             setDiscount(0);
@@ -43,7 +44,6 @@ const TotalCard = ({ data }: Props) => {
     };
 
     const handleProceed = () => {
-        dispatch(setFinalPrice((totalAmount * (1 - discount)).toFixed(2)));
         router.push("/checkout");
     };
 
@@ -104,13 +104,25 @@ const TotalCard = ({ data }: Props) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center w-full">
-                    <button
-                        className="bg-blue-500 transition-all ease-in-out duration-200 mx-auto disabled:cursor-not-allowed text-white px-4 py-2 mt-6 rounded-md shadow-md hover:bg-blue-600"
-                        onClick={handleProceed}
-                        disabled={totalAmount == 0}
-                    >
-                        Proceed to Payment
-                    </button>
+                    {totalAmount == 0 ? (
+                        <button
+                            className="bg-blue-500 transition-all ease-in-out duration-200 mx-auto text-white px-4 py-2 mt-6 rounded-md shadow-md "
+                            disabled
+                        >
+                            Proceed to Payment
+                        </button>
+                    ) : (
+                        <Link
+                            href="/checkout"
+                            className={`bg-blue-500 transition-all ease-in-out duration-200 mx-auto ${
+                                totalAmount == 0
+                                    ? "cursor-not-allowed opacity-50"
+                                    : "hover:bg-blue-600"
+                            } text-white px-4 py-2 mt-6 rounded-md shadow-md`}
+                        >
+                            Proceed to Payment
+                        </Link>
+                    )}
                 </div>
             </div>
         </div>
