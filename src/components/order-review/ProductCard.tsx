@@ -15,7 +15,7 @@ const ProductCard = ({ product }: Props) => {
     return (
         <div className="border p-2 lg:p-4 flex flex-col sm:flex-row gap-4 rounded-md shadow-md w-full ">
             <div className="flex flex-1 gap-5">
-                <div>
+                <div className="flex items-center">
                     <Image
                         src={product.image}
                         alt={product.title}
@@ -24,7 +24,7 @@ const ProductCard = ({ product }: Props) => {
                         className="w-10 h-10 "
                     />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 flex items-center">
                     <p className="text-sm font-medium ">{product.title}</p>
                 </div>
             </div>
