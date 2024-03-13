@@ -46,6 +46,7 @@ const UpiForm = ({ setLoading }: Props) => {
 
         setTimeout(() => {
             dispatch(setPaymentMode("CARDS"));
+            //Grabbing the payment status from the possibleTransaction object
             const status = possibleTransaction[randomValue];
             dispatch(setStatus(status));
             router.push(status);

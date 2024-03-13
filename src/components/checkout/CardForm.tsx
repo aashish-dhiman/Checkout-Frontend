@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { RootState } from "@/redux/store";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setPaymentMode, setStatus } from "@/redux/features/data-slice";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { validateCardData, validateUPI } from "@/lib/validator";
 import CancelButton from "./CancelButton";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -53,6 +49,7 @@ const CardForm = ({ setLoading }: Props) => {
 
         setTimeout(() => {
             dispatch(setPaymentMode("CARDS"));
+            //Grabbing the payment status from the possibleTransaction object
             const status = possibleTransaction[randomValue];
             dispatch(setStatus(status));
             router.push(status);

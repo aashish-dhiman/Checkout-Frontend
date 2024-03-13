@@ -9,13 +9,12 @@ interface Props {}
 
 const Header = (props: Props) => {
     const { data, isError, isLoading, error } = useMerchantData();
-    console.log(data);
 
     if (isLoading) return <HeaderSkeleton />;
 
     return (
         <div className="w-full flex items-center justify-between px-7 py-4 md:px-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
                 <Image
                     src={data?.merchantLogo || "logo.png"}
                     alt={data?.merchantName}
@@ -23,7 +22,9 @@ const Header = (props: Props) => {
                     height={60}
                     className="w-10 h-10 "
                 />
-                <h1 className="text-lg font-bold">{data?.merchantName}</h1>
+                <h1 className="text-lg font-bold text-gray-700">
+                    {data?.merchantName}
+                </h1>
             </div>
             <ModeToggle />
         </div>

@@ -10,7 +10,7 @@ export const useOrderDetails = () => {
             const { data } = await axios.get(URL);
             return data;
         },
-        //caching for 5 seconds
-        staleTime: 5 * 1000,
+        //caching for 10 minute
+        staleTime: 10 * 1000 * 60,
     });
 };
