@@ -12,10 +12,10 @@ interface Props {}
 
 export default function Home() {
     const { products, paymentOptions, finalPrice, status, paymentMode } =
-        useSelector((state: RootState) => state.dataReducer);
+        useSelector((state: RootState) => state.order);
     return (
-        <div className="container mx-auto lg:px-36 w-full flex items-center justify-center mt-5 pb-10">
-            <div className="rounded-lg w-[500px] border-2 p-3 ">
+        <div className="px-2 mx-auto w-full flex items-center justify-center py-6">
+            <div className="rounded-lg w-[420px] border-2 px-4 pb-6 overflow-hidden">
                 <div className="flex items-center justify-center -mt-10">
                     <Image src={failed} alt="failed" />
                 </div>
@@ -23,7 +23,7 @@ export default function Home() {
                     <h3>Transaction failed !</h3>
                     <p></p>
                 </div>
-                <div className=" px-4">
+                <div className=" px-1">
                     <div className="flex items-center justify-between mt-6">
                         <span>Payment Mode</span>
                         <span>{paymentMode}</span>

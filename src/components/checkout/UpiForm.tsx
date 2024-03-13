@@ -45,7 +45,7 @@ const UpiForm = ({ setLoading }: Props) => {
         setLoading(true);
 
         setTimeout(() => {
-            dispatch(setPaymentMode("CARDS"));
+            dispatch(setPaymentMode("UPI"));
             //Grabbing the payment status from the possibleTransaction object
             const status = possibleTransaction[randomValue];
             dispatch(setStatus(status));

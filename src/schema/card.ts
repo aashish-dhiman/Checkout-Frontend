@@ -25,7 +25,7 @@ export const CardDataSchema = z.object({
             message: "Only digits are allowed",
         })
         .refine((val) => parseInt(val) >= 1 && parseInt(val) <= 12, {
-            message: "Expiry month should be between 1 - 12",
+            message: "Please choose (1-12)",
         }),
     expiryYear: z
         .string()
@@ -33,12 +33,12 @@ export const CardDataSchema = z.object({
             message: "Year must be 4 digits",
         })
         .refine((val) => parseInt(val) >= new Date().getFullYear(), {
-            message: "Expiry >= Current Year",
+            message: "Card is expired",
         }),
     cvv: z.string().refine((val) => val.length === 3 && /^\d+$/.test(val), {
         message: "CVV must be 3 digits",
     }),
     name: z.string().refine((val) => /^[a-zA-Z\s]+$/.test(val), {
-        message: "Cardholder name should only contain alphabets",
+        message: "Only alphabets are allowed",
     }),
 });

@@ -23,7 +23,7 @@ interface Props {
 
 const TotalCard = ({ data }: Props) => {
     const products = data?.products;
-    const paymentOption = data?.paymentMethods;
+
     const [discount, setDiscount] = useState(0);
     const [coupon, setCoupon] = useState("");
     const [showWarning, setShowWarning] = useState(false);

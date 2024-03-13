@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const dataSlice = createSlice({
-    name: "data",
+    name: "order",
     initialState,
     reducers: {
         setProducts: (state, action) => {

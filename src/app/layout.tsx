@@ -27,9 +27,9 @@ export default function RootLayout({
                     <ThemeProviders>
                         <ReduxProvider>
                             <Toaster />
-                            <main className="min-h-screen min-w-screen lg:px-20">
+                            <main className="min-h-screen min-w-screen ">
                                 <Header />
-                                {children}
+                                <div className="lg:px-20">{children}</div>
                             </main>
                         </ReduxProvider>
                     </ThemeProviders>
