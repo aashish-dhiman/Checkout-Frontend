@@ -18,9 +18,10 @@ const CancelButton = (props: Props) => {
             <Button
                 variant="destructive"
                 className="px-4 mb-2"
+                type="reset"
                 onClick={handlePaymentCancel}
             >
-                Cancel Transaction
+                Cancel
             </Button>
         </div>
     );
