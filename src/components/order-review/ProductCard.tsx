@@ -25,7 +25,7 @@ const ProductCard = ({ product }: Props) => {
                     />
                 </div>
                 <div className="flex-1">
-                    <p className="text-base font-medium ">{product.title}</p>
+                    <p className="text-sm font-medium ">{product.title}</p>
                 </div>
             </div>
             <div className="flex flex-row justify-between gap-4 items-start w-full sm:w-[150px]">

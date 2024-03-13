@@ -13,7 +13,7 @@ export default function Home() {
     );
 
     return (
-        <div className="container mx-auto lg:px-36 w-full mt-5 ">
+        <div className="container mx-auto lg:px-40 w-full mt-5 pb-8">
             <div className="border-2 p-2 sm:p-8 min-h-[500px] rounded-lg flex flex-col">
                 <h1 className="text-3xl font-bold mb-4 w-full ">Payment</h1>
                 <div className="flex-1">
