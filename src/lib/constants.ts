@@ -4,7 +4,7 @@
  */
 
 export const possibleTransaction: { [key: number]: string } = {
-    1: "/success",
-    2: "/pending",
-    3: "/failed",
+    1: "success",
+    2: "pending",
+    3: "failed",
 };

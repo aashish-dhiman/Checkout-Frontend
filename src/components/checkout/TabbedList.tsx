@@ -8,11 +8,6 @@ import UpiForm from "./UpiForm";
 
 interface Props {}
 
-/**
- * Renders a tabbed list component for checkout.
- * @param {Props} props - The component props.
- * @returns {JSX.Element} The rendered component.
- */
 const TabbedList = (props: Props) => {
     const [loading, setLoading] = useState<boolean>(false);
 

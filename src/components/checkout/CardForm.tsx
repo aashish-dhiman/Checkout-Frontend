@@ -52,7 +52,7 @@ const CardForm = ({ setLoading }: Props) => {
             //Grabbing the payment status from the possibleTransaction object
             const status = possibleTransaction[randomValue];
             dispatch(setStatus(status));
-            router.push(status);
+            router.push("/confirmation");
         }, 3000);
     }
     return (

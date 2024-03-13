@@ -89,7 +89,7 @@ const TotalCard = ({ data }: Props) => {
                     </div>
                     <div className="flex items-center justify-between mt-6">
                         <span>Discount</span>
-                        <span>${(totalAmount * discount).toFixed(2)}</span>
+                        <span>-${(totalAmount * discount).toFixed(2)}</span>
                     </div>
                     <div className="flex items-center justify-between mt-4">
                         <span>Delivery</span>

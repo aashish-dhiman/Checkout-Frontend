@@ -19,14 +19,21 @@ const Header = (props: Props) => {
     const theme = GetThemeFromStore();
 
     if (isLoading) return <HeaderSkeleton />;
+    const themeColor = localStorage.getItem("theme") || "light";
 
     return (
         <div
             style={{
-                backgroundColor: theme["--background"],
-                color: theme["--primary-foreground"],
+                backgroundColor:
+                    themeColor === "dark" ? theme["--background"] : undefined,
+                color:
+                    themeColor === "dark"
+                        ? theme["--primary-foreground"]
+                        : undefined,
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
             }}
-            className="w-full flex items-center justify-between px-3 sm:px-7 py-4 lg:px-[100px]"
+            className="fixed top-0 w-full z-50 flex border-b-2 items-center justify-between px-3 sm:px-7 py-4 lg:px-[100px]"
         >
             <div className="flex items-center gap-2 ">
                 <Image
@@ -38,7 +45,10 @@ const Header = (props: Props) => {
                 />
                 <h1
                     style={{
-                        color: theme["--primary-foreground"],
+                        color:
+                            themeColor === "dark"
+                                ? theme["--primary-foreground"]
+                                : undefined,
                     }}
                     className="text-lg font-bold"
                 >

@@ -1,6 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+interface OrderDetail {
+    products: any[];
+    paymentOptions: any[];
+    finalPrice: number;
+    status: "success" | "failed" | "pending" | "";
+    paymentMode: "CARD" | "UPI" | "";
+}
+
+const initialState: OrderDetail = {
     products: [],
     paymentOptions: [],
     finalPrice: 0,
