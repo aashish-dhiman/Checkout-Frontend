@@ -14,7 +14,7 @@ export default function Home() {
     const { products, paymentOptions, finalPrice, status, paymentMode } =
         useSelector((state: RootState) => state.order);
     return (
-        <div className="container mx-auto w-full flex items-center justify-center py-6">
+        <div className="mx-auto w-full flex items-center justify-center py-6">
             <div className="rounded-lg w-[420px] border-2 px-4 py-6  overflow-hidden">
                 <div className="flex items-center justify-center -mt-10">
                     <Image src={success} alt="failed" />
