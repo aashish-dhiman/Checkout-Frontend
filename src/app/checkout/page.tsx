@@ -13,8 +13,8 @@ export default function Home() {
     );
 
     return (
-        <div className=" mx-auto lg:px-40 w-full pt-5 pb-8">
-            <div className="border-2 p-5 sm:p-8 min-h-[500px] rounded-lg flex flex-col">
+        <div className=" mx-auto sm:px-5 md:px-16 lg:px-40 w-full sm:pt-5 pb-8">
+            <div className="sm:border-2 p-5 sm:p-8 min-h-[500px] rounded-lg flex flex-col">
                 <h1 className="text-3xl font-bold mb-4 w-full ">Payment</h1>
                 <div className="flex-1">
                     <TabbedList />

@@ -28,11 +28,11 @@ const ProductCard = ({ product }: Props) => {
                     <p className="text-sm font-medium ">{product.title}</p>
                 </div>
             </div>
-            <div className="flex flex-row justify-between gap-4 items-start w-full sm:w-[150px]">
-                <p className="text-gray-600 gap-2 sm:gap-0 flex sm:flex-col items-center">
+            <div className="flex flex-row justify-between gap-4 text-sm items-start w-full sm:w-[150px]">
+                <p className="text-gray-600 gap-2 sm:gap-1 flex sm:flex-col items-center">
                     <span>Price</span> <span>${product.price}</span>
                 </p>
-                <p className="text-gray-600 gap-2 sm:gap-0 flex sm:flex-col items-center">
+                <p className="text-gray-600 gap-2 sm:gap-1 flex sm:flex-col items-center">
                     <span>Quantity</span> <span>${product.quantity}</span>
                 </p>
             </div>

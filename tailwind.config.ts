@@ -1,7 +1,4 @@
 import type { Config } from "tailwindcss";
-// import { GetThemeFromStore } from "./src/lib/getStoreTheme";
-
-// const dynamicTheme = GetThemeFromStore();
 
 const config = {
     darkMode: ["class"],
