@@ -10,5 +10,7 @@ export const useMerchantData = () => {
             const { data } = await axios.get(URL);
             return data;
         },
+        //caching for 5 seconds
+        staleTime: 5 * 1000,
     });
 };
