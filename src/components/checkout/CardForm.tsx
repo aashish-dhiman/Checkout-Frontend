@@ -63,7 +63,7 @@ const CardForm = ({ setLoading }: Props) => {
                     name="number"
                     render={({ field }) => (
                         <>
-                            <FormItem className="space-y-1">
+                            <FormItem className="space-y-1 relative">
                                 <FormLabel>Card Number</FormLabel>
                                 <FormControl>
                                     <Input
@@ -74,18 +74,18 @@ const CardForm = ({ setLoading }: Props) => {
                                         {...field}
                                     />
                                 </FormControl>
-                                <FormMessage className="text-xs" />
+                                <FormMessage className="text-xs absolute -bottom-5 left-2" />
                             </FormItem>
                         </>
                     )}
                 />
-                <div className="flex flex-col sm:flex-row gap-5 items-start justify-between w-full">
-                    <div className="flex gap-3 md:w-1/3">
+                <div className="flex flex-col sm:flex-row gap-10 sm:gap-5 items-start justify-between w-full">
+                    <div className="flex gap-3 md:w-1/2">
                         <FormField
                             control={form.control}
                             name="expiryMonth"
                             render={({ field }) => (
-                                <FormItem className="space-y-1">
+                                <FormItem className="space-y-1 relative">
                                     <FormLabel className="text-sm">
                                         Expiry Month
                                     </FormLabel>
@@ -98,7 +98,7 @@ const CardForm = ({ setLoading }: Props) => {
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormMessage className="text-xs" />
+                                    <FormMessage className="text-xs absolute -bottom-9 sm:-bottom-5 left-2" />
                                 </FormItem>
                             )}
                         />
@@ -106,7 +106,7 @@ const CardForm = ({ setLoading }: Props) => {
                             control={form.control}
                             name="expiryYear"
                             render={({ field }) => (
-                                <FormItem className="space-y-1">
+                                <FormItem className="space-y-1 relative">
                                     <FormLabel>Expiry Year</FormLabel>
                                     <FormControl>
                                         <Input
@@ -117,17 +117,17 @@ const CardForm = ({ setLoading }: Props) => {
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormMessage className="text-xs" />
+                                    <FormMessage className="text-xs absolute -bottom-9 sm:-bottom-5 left-2" />
                                 </FormItem>
                             )}
                         />
                     </div>
-                    <div className="space-y-1 sm:w-1/4">
+                    <div className="space-y-1 sm:w-1/3 ">
                         <FormField
                             control={form.control}
                             name="cvv"
                             render={({ field }) => (
-                                <FormItem className="space-y-1">
+                                <FormItem className="space-y-1 relative">
                                     <FormLabel>CVV</FormLabel>
                                     <FormControl>
                                         <Input
@@ -138,7 +138,7 @@ const CardForm = ({ setLoading }: Props) => {
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormMessage className="text-xs" />
+                                    <FormMessage className="text-xs absolute -bottom-5 left-2" />
                                 </FormItem>
                             )}
                         />
@@ -148,7 +148,7 @@ const CardForm = ({ setLoading }: Props) => {
                     control={form.control}
                     name="name"
                     render={({ field }) => (
-                        <FormItem className="space-y-1">
+                        <FormItem className="space-y-1 relative mt-2">
                             <FormLabel>Cardholder Name</FormLabel>
                             <FormControl>
                                 <Input
@@ -157,7 +157,7 @@ const CardForm = ({ setLoading }: Props) => {
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage className="text-xs" />
+                            <FormMessage className="text-xs absolute -bottom-5 left-2" />
                         </FormItem>
                     )}
                 />

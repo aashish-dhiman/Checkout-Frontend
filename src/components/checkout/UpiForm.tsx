@@ -65,7 +65,7 @@ const UpiForm = ({ setLoading }: Props) => {
                         name="id"
                         render={({ field }) => (
                             <>
-                                <FormItem className="space-y-1">
+                                <FormItem className="space-y-1 relative">
                                     <FormLabel>UPI ID</FormLabel>
                                     <FormControl>
                                         <Input
@@ -74,7 +74,7 @@ const UpiForm = ({ setLoading }: Props) => {
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormMessage className="text-xs" />
+                                    <FormMessage className="text-xs absolute -bottom-5 left-2" />
                                 </FormItem>
                             </>
                         )}
