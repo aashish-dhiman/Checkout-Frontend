@@ -41,7 +41,7 @@ export const validateCard = (cardData: {
         cardData.name.length === 0 ||
         !cardData.name.match(/^[a-zA-Z ]*$/)
     ) {
-        toast("Please check Card Holder's Name!");
+        toast("Please Check Card Holder's Name!");
         return false;
     }
     return true;
