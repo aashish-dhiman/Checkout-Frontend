@@ -48,7 +48,7 @@ const TotalCard = ({ data }: Props) => {
     };
 
     return (
-        <div className="flex flex-col items-center text-white dark:bg-transparent justify-between bg-gray-950 w-full md:w-[40%] rounded-lg p-5 h-[360px] relative top-0 dark:border">
+        <div className="flex flex-col items-center text-white dark:bg-transparent justify-between bg-gray-950 w-full md:w-[40%] rounded-lg p-5 min-h-[370px] relative top-0 dark:border">
             <div className="w-full flex-1 flex flex-col justify-between">
                 <h3 className="text-xl font-bold">Cart Total</h3>
                 <div className="flex items-center justify-between mt-4">
@@ -105,7 +105,7 @@ const TotalCard = ({ data }: Props) => {
                 </div>
                 <div className="flex items-center justify-center w-full">
                     <button
-                        className="bg-blue-500 transition-all ease-in-out duration-200 mx-auto disabled:cursor-not-allowed text-white px-4 py-2 mt-4 rounded-md shadow-md hover:bg-blue-600"
+                        className="bg-blue-500 transition-all ease-in-out duration-200 mx-auto disabled:cursor-not-allowed text-white px-4 py-2 mt-6 rounded-md shadow-md hover:bg-blue-600"
                         onClick={handleProceed}
                         disabled={totalAmount == 0}
                     >

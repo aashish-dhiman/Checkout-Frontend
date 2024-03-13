@@ -5,13 +5,14 @@ import { useSelector } from "react-redux";
 import TabbedList from "@/components/checkout/TabbedList";
 import { Separator } from "@/components/ui/separator";
 
+
 interface Props {}
 
 export default function Home() {
     const { products, paymentOptions, finalPrice } = useSelector(
         (state: RootState) => state.dataReducer
     );
-
+   
     return (
         <div className="container mx-auto lg:px-40 w-full mt-5 pb-8">
             <div className="border-2 p-2 sm:p-8 min-h-[500px] rounded-lg flex flex-col">

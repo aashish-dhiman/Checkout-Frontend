@@ -17,6 +17,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { validateCard, validateUPI } from "@/lib/validator";
 import Loading from "../states/Loading";
+import CancelButton from "./CancelButton";
 
 interface Props {}
 
@@ -84,6 +85,7 @@ const TabbedList = (props: Props) => {
         }
     };
 
+
     return (
         <div className="flex flex-col gap-4 justify-between items-start w-full pt-4">
             {loading ? (
@@ -106,14 +108,17 @@ const TabbedList = (props: Props) => {
                                         }}
                                     />
                                 </div>
-                                <Button
-                                    className="px-10 mb-2"
-                                    onClick={() =>
-                                        handlePaymentOptionSelect("UPI")
-                                    }
-                                >
-                                    Pay Securely
-                                </Button>
+                                <div className="flex items-center justify-between gap-5">
+                                    <Button
+                                        className="px-10 mb-2"
+                                        onClick={() =>
+                                            handlePaymentOptionSelect("UPI")
+                                        }
+                                    >
+                                        Pay Securely
+                                    </Button>
+                                    <CancelButton/>
+                                </div>
                             </CardContent>
                         </Card>
                     </TabsContent>
@@ -217,14 +222,19 @@ const TabbedList = (props: Props) => {
                                     />
                                 </div>
                                 <div className="flex items-center justify-center pt-5">
-                                    <Button
-                                        className="px-10 mb-2"
-                                        onClick={() =>
-                                            handlePaymentOptionSelect("CARDS")
-                                        }
-                                    >
-                                        Pay Securely
-                                    </Button>
+                                    <div className="flex items-center justify-between gap-5">
+                                        <Button
+                                            className="px-10 mb-2"
+                                            onClick={() =>
+                                                handlePaymentOptionSelect(
+                                                    "CARDS"
+                                                )
+                                            }
+                                        >
+                                            Pay Securely
+                                        </Button>
+                                        <CancelButton />
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>

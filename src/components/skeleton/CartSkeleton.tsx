@@ -4,7 +4,7 @@ interface Props {}
 
 const CartSkeleton = (props: Props) => {
     return (
-        <div className="container mx-auto w-full">
+        <div className="container w-full p-0">
             <div className="flex flex-col md:flex-row gap-4 justify-between items-start w-full ">
                 <div className="flex-1 w-full md:w-[60%] flex flex-col gap-5">
                     <Skeleton className="w-full h-[70px] rounded-xl" />
