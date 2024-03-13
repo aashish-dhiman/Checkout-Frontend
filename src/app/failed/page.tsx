@@ -15,7 +15,7 @@ export default function Home() {
         useSelector((state: RootState) => state.order);
     return (
         <div className="px-2 mx-auto w-full flex items-center justify-center py-6">
-            <div className="rounded-lg w-[420px] border-2 px-4 pb-6 overflow-hidden">
+            <div className="rounded-lg w-[420px] sm:border-2 px-4 pb-6 overflow-hidden">
                 <div className="flex items-center justify-center -mt-10">
                     <Image src={failed} alt="failed" />
                 </div>
