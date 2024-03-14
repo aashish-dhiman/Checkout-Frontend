@@ -33,7 +33,7 @@ const ProductCard = ({ product }: Props) => {
                     <span>Price</span> <span>${product.price}</span>
                 </p>
                 <p className="text-gray-600 gap-2 sm:gap-1 flex sm:flex-col items-center">
-                    <span>Quantity</span> <span>${product.quantity}</span>
+                    <span>Quantity</span> <span>{product.quantity}</span>
                 </p>
             </div>
         </div>
