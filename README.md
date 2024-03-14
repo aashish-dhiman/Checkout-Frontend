@@ -1,4 +1,4 @@
-**Seamless Payment Checkout Experience**
+**InstaPayment - Seamless Payment Checkout Experience**
 
 ---
 
