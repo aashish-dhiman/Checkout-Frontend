@@ -48,7 +48,7 @@ const TotalCard = ({ data }: Props) => {
     };
 
     return (
-        <div className="flex flex-col items-center text-white dark:bg-transparent justify-between bg-gray-950 w-full md:w-[40%] rounded-lg p-5 min-h-[370px] relative top-0 dark:border">
+        <div className="flex flex-col items-center text-white dark:text-inherit dark:bg-transparent justify-between bg-gray-950 w-full md:w-[40%] rounded-lg p-5 min-h-[370px] relative top-0 dark:border">
             <div className="w-full flex-1 flex flex-col justify-between">
                 <h3 className="text-xl font-bold">Cart Total</h3>
                 <div className="flex items-center justify-between mt-4">

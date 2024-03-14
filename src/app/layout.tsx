@@ -6,6 +6,7 @@ import ThemeProviders from "@/providers/ThemeProvider";
 import Header from "@/components/navbar/Header";
 import ReduxProvider from "@/providers/ReduxProvider";
 import { Toaster } from "@/components/ui/sonner";
+import Wrapper from "@/components/Wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,14 @@ export default function RootLayout({
                     <ThemeProviders>
                         <ReduxProvider>
                             <Toaster />
-                            <main className="min-h-screen min-w-screen ">
-                                <Header />
-                                <div className="lg:px-20 pt-20">{children}</div>
-                            </main>
+                            <Wrapper>
+                                <main className="min-h-screen min-w-screen ">
+                                    <Header />
+                                    <div className="lg:px-20 pt-20">
+                                        {children}
+                                    </div>
+                                </main>
+                            </Wrapper>
                         </ReduxProvider>
                     </ThemeProviders>
                 </QueryProvider>

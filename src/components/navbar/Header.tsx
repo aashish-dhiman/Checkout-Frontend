@@ -13,23 +13,23 @@ interface Props {}
 
 const Header = (props: Props) => {
     const { data, isError, isLoading, error } = useMerchantData();
-    const dispatch = useDispatch<AppDispatch>();
-    dispatch(setTheme(data?.theme));
+    // const dispatch = useDispatch<AppDispatch>();
+    // dispatch(setTheme(data?.theme));
 
-    const theme = GetThemeFromStore();
+    // const theme = GetThemeFromStore();
 
     if (isLoading) return <HeaderSkeleton />;
-    const themeColor = localStorage.getItem("theme") || "light";
+    // const themeColor = localStorage.getItem("theme") || "light";
 
     return (
         <div
             style={{
-                backgroundColor:
-                    themeColor === "dark" ? theme["--background"] : undefined,
-                color:
-                    themeColor === "dark"
-                        ? theme["--primary-foreground"]
-                        : undefined,
+                // backgroundColor:
+                //     themeColor === "dark" ? theme["--background"] : undefined,
+                // color:
+                //     themeColor === "dark"
+                //         ? theme["--primary-foreground"]
+                //         : undefined,
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
             }}
@@ -45,10 +45,10 @@ const Header = (props: Props) => {
                 />
                 <h1
                     style={{
-                        color:
-                            themeColor === "dark"
-                                ? theme["--primary-foreground"]
-                                : undefined,
+                        // color:
+                        //     themeColor === "dark"
+                        //         ? theme["--primary-foreground"]
+                        //         : undefined,
                     }}
                     className="text-lg font-bold"
                 >

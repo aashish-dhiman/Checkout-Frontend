@@ -25,7 +25,7 @@ export default function Home() {
         failed: {
             title: "Payment Failed",
             message:
-                "Oops! It seems there was an issue processing your payment. Please try again or contact support for assistance.",
+                "Oops! It seems there was an issue in processing your payment. Please try again or contact support for assistance.",
         },
         pending: {
             title: "Payment Pending",
