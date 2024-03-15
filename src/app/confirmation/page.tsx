@@ -73,26 +73,13 @@ export default function Home() {
                 </div>
 
                 <div className=" sm:border-2 rounded-lg py-5 max-w-xl mx-auto lg:max-w-full">
-                    <div className="flex items-start justify-between sm:px-6">
-                        <div className=" w-full">
-                            <div className="text-xl font-bold w-full flex gap-3 items-center">
+                    <div className="flex items-start justify-between sm:px-6 ">
+                        <div className=" w-full ">
+                            <div className="text-xl font-bold w-full flex gap-3 items-center ">
                                 <span>Order Summary</span>
-                                <Image
-                                    src={
-                                        status === "success"
-                                            ? success
-                                            : status === "failed"
-                                            ? failed
-                                            : pending
-                                    }
-                                    alt={status}
-                                    width={100}
-                                    height={100}
-                                    className="w-16 h-fit "
-                                />
                             </div>
                             <Separator className="my-4" />
-                            <div className="flex flex-col justify-center gap-3">
+                            <div className="flex flex-col justify-center gap-3 relative">
                                 <div className="flex items-center justify-between">
                                     <span>Order ID</span>
                                     <span>#{randomNumber}</span>
@@ -109,6 +96,19 @@ export default function Home() {
                                     <span>Status</span>
                                     <span>{status.replace("/", "")}</span>
                                 </div>
+                                <Image
+                                    src={
+                                        status === "success"
+                                            ? success
+                                            : status === "failed"
+                                            ? failed
+                                            : pending
+                                    }
+                                    alt={status}
+                                    width={100}
+                                    height={100}
+                                    className="w-[100px] sm:w-[150px] h-fit absolute opacity-70 z-10 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                />
                             </div>
                         </div>
                     </div>
