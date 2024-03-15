@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setPaymentMode, setStatus } from "@/redux/features/data-slice";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { validateUPI } from "@/lib/validator";
 import CancelButton from "./CancelButton";
@@ -20,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { possibleTransaction } from "@/lib/constants";
 import { UPISchema } from "@/schema/upi";
+import SubmitButton from "./SubmitButton";
 
 interface Props {
     setLoading: (loading: boolean) => void;
@@ -80,9 +80,7 @@ const UpiForm = ({ setLoading }: Props) => {
                         )}
                     />
                     <div className="flex items-center justify-center gap-5 w-full">
-                        <Button className="px-10 mb-2" type="submit">
-                            Pay Securely
-                        </Button>
+                        <SubmitButton />
                         <CancelButton />
                     </div>
                 </form>

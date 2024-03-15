@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setPaymentMode, setStatus } from "@/redux/features/data-slice";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { validateCardData, validateUPI } from "@/lib/validator";
 import CancelButton from "./CancelButton";
@@ -20,6 +19,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { possibleTransaction } from "@/lib/constants";
+import SubmitButton from "./SubmitButton";
 
 interface Props {
     setLoading: (loading: boolean) => void;
@@ -162,9 +162,7 @@ const CardForm = ({ setLoading }: Props) => {
                     )}
                 />
                 <div className="flex items-center justify-center gap-5">
-                    <Button className="px-10 mb-2" type="submit">
-                        Pay Securely
-                    </Button>
+                    <SubmitButton />
                     <CancelButton />
                 </div>
             </form>
