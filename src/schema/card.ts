@@ -1,14 +1,6 @@
 "use client";
-
 import { z } from "zod";
 
-export interface CardData {
-    number: string;
-    expiryMonth: string;
-    expiryYear: string;
-    cvv: string;
-    name: string;
-}
 
 export const CardDataSchema = z.object({
     number: z

@@ -1,5 +1,6 @@
-import { CardData, CardDataSchema } from "@/schema/card";
-import { UPIData, UPISchema } from "@/schema/upi";
+import { CardDataSchema } from "@/schema/card";
+import { UPISchema } from "@/schema/upi";
+import { CardData, UPIData } from "@/types/types";
 import { toast } from "sonner";
 
 export const validateUPI = (upi: UPIData) => {

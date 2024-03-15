@@ -1,13 +1,6 @@
+import { ThemeState } from "@/types/types";
 import { createSlice } from "@reduxjs/toolkit";
 
-interface ThemeState {
-    theme: {
-        "--background": string;
-        "--foreground": string;
-        "--primary": string;
-        "--primary-foreground": string;
-    };
-}
 
 const initialState: ThemeState = {
     theme: {

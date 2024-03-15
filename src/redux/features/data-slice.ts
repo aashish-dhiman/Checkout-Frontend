@@ -1,12 +1,6 @@
+import { OrderDetail } from "@/types/types";
 import { createSlice } from "@reduxjs/toolkit";
 
-interface OrderDetail {
-    products: any[];
-    paymentOptions: any[];
-    finalPrice: number;
-    status: "success" | "failed" | "pending" | "";
-    paymentMode: "CARD" | "UPI" | "";
-}
 
 const initialState: OrderDetail = {
     products: [],
